@@ -1,73 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SheElysian - Beautiful handcrafted jewelry, crochet items, tote bags, and bookmarks." />
   <title>SheElysian</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    :root {
+      --main-color: #690216;
+      --bg-color: #ffffff;
+      --text-color: #333;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
+
     header {
-      background-color: #690216;
-      padding: 20px;
+      background-color: var(--main-color);
+      color: #fff;
       text-align: center;
-      color: white;
+      padding: 30px 20px;
     }
+
     nav {
-      background-color: #ffffff;
-      padding: 10px;
+      background-color: #fff;
+      border-bottom: 2px solid var(--main-color);
+      padding: 10px 0;
       text-align: center;
-      border-bottom: 2px solid #690216;
     }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #690216;
+      color: var(--main-color);
       font-weight: bold;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: #333;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--main-color);
+      margin-top: 40px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      gap: 25px;
+      padding: 20px 0;
     }
+
     .product {
       border: 1px solid #ddd;
-      border-radius: 10px;
+      border-radius: 12px;
       background: white;
-      width: 200px;
+      width: 220px;
       text-align: center;
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
     }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
     .product img {
       width: 100%;
-      height: 150px;
+      height: 160px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
     }
+
     .add-to-cart {
-      background-color: #690216;
+      background-color: var(--main-color);
       color: white;
       border: none;
-      padding: 8px 12px;
-      margin-top: 10px;
+      padding: 10px 16px;
+      margin-top: 12px;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
+
+    .add-to-cart:hover {
+      background-color: #8e0a2b;
+    }
+
     footer {
-      background-color: #690216;
+      background-color: var(--main-color);
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       color: white;
-      margin-top: 20px;
+      font-size: 14px;
+      margin-top: 30px;
     }
+
     @media (max-width: 600px) {
       .products {
         flex-direction: column;
@@ -89,45 +133,55 @@
     <a href="#bookmark">Bookmarks</a>
   </nav>
 
-  <section class="products" id="jewelry">
-    <h2>Jewelry</h2>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="Gold Earrings">
-      <h3>Gold Earrings</h3>
-      <p>₹2,500</p>
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </section>
+  <main>
+    <section id="jewelry">
+      <h2>Jewelry</h2>
+      <div class="products">
+        <article class="product">
+          <img src="https://via.placeholder.com/200x150" alt="Gold Earrings">
+          <h3>Gold Earrings</h3>
+          <p>₹2,500</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </article>
+      </div>
+    </section>
 
-  <section class="products" id="crochet">
-    <h2>Crochet</h2>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="Crochet Flower">
-      <h3>Crochet Flower</h3>
-      <p>₹500</p>
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </section>
+    <section id="crochet">
+      <h2>Crochet</h2>
+      <div class="products">
+        <article class="product">
+          <img src="https://via.placeholder.com/200x150" alt="Crochet Flower">
+          <h3>Crochet Flower</h3>
+          <p>₹500</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </article>
+      </div>
+    </section>
 
-  <section class="products" id="tote">
-    <h2>Tote Bags</h2>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="Canvas Tote">
-      <h3>Canvas Tote</h3>
-      <p>₹1,200</p>
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </section>
+    <section id="tote">
+      <h2>Tote Bags</h2>
+      <div class="products">
+        <article class="product">
+          <img src="https://via.placeholder.com/200x150" alt="Canvas Tote">
+          <h3>Canvas Tote</h3>
+          <p>₹1,200</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </article>
+      </div>
+    </section>
 
-  <section class="products" id="bookmark">
-    <h2>Bookmarks</h2>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="Resin Bookmark">
-      <h3>Resin Bookmark</h3>
-      <p>₹300</p>
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </section>
+    <section id="bookmark">
+      <h2>Bookmarks</h2>
+      <div class="products">
+        <article class="product">
+          <img src="https://via.placeholder.com/200x150" alt="Resin Bookmark">
+          <h3>Resin Bookmark</h3>
+          <p>₹300</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 SheElysian. All rights reserved.</p>
