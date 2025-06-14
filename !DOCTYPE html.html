@@ -3,188 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SheElysian - Beautiful handcrafted jewelry, crochet items, tote bags, and bookmarks." />
   <title>SheElysian</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-color: #690216;
-      --bg-color: #ffffff;
-      --text-color: #333;
+      --primary: #690216;
+      --background: #fff;
+      --light-pink: #ffe6f0;
+      --gray: #333;
+      --border: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--gray);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
-      background-color: var(--main-color);
-      color: #fff;
+      background-color: var(--light-pink);
+      padding: 10px;
       text-align: center;
-      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #000;
     }
 
-    nav {
-      background-color: #fff;
-      border-bottom: 2px solid var(--main-color);
-      padding: 10px 0;
-      text-align: center;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: var(--light-pink);
+      border-bottom: 1px solid var(--border);
     }
 
-    nav a {
-      margin: 0 15px;
+    .navbar .logo img {
+      height: 80px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .navbar .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar input[type="search"] {
+      width: 300px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .navbar-icons {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px;
+      background: #fff;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .menu a {
       text-decoration: none;
-      color: var(--main-color);
-      font-weight: bold;
+      color: var(--primary);
+      font-weight: 600;
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #333;
+    .menu a:hover {
+      color: #500111;
     }
 
-    h2 {
+    .banner {
+      background: linear-gradient(to right, #ffc0cb, #fff0f5);
       text-align: center;
-      color: var(--main-color);
-      margin-top: 40px;
+      padding: 60px 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
-    main {
-      padding: 20px;
+    .banner h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 20px 0;
+    .banner p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
     }
 
-    .product {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      background: white;
-      width: 220px;
-      text-align: center;
-      padding: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-    }
-
-    .product img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .add-to-cart {
-      background-color: var(--main-color);
+    .banner button {
+      background-color: var(--primary);
       color: white;
       border: none;
-      padding: 10px 16px;
-      margin-top: 12px;
-      cursor: pointer;
+      padding: 12px 24px;
       border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    .add-to-cart:hover {
-      background-color: #8e0a2b;
+    .banner button:hover {
+      background-color: #500111;
     }
 
     footer {
-      background-color: var(--main-color);
       text-align: center;
-      padding: 15px;
+      background: var(--primary);
       color: white;
-      font-size: 14px;
-      margin-top: 30px;
+      padding: 20px;
     }
 
-    @media (max-width: 600px) {
-      .products {
+    @media (max-width: 768px) {
+      .navbar {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .navbar input[type="search"] {
+        width: 100%;
+      }
+
+      .navbar-icons {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>SheElysian</h1>
-    <p>Jewelry • Crochet • Tote Bags • Bookmarks</p>
-  </header>
 
-  <nav>
-    <a href="#jewelry">Jewelry</a>
-    <a href="#crochet">Crochet</a>
-    <a href="#tote">Tote Bags</a>
-    <a href="#bookmark">Bookmarks</a>
-  </nav>
+<header>
+  🎉 Happy Birthday Sale – Free gift on orders above ₹1999!
+</header>
 
-  <main>
-    <section id="jewelry">
-      <h2>Jewelry</h2>
-      <div class="products">
-        <article class="product">
-          <img src="https://via.placeholder.com/200x150" alt="Gold Earrings">
-          <h3>Gold Earrings</h3>
-          <p>₹2,500</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </article>
-      </div>
-    </section>
+<div class="navbar">
+  <div class="logo" style="background-color: #500111; padding: 10px; border-radius: 8px;>
+    <a href="!DOCTYPE%20html.html">
+      <img src="C:\Users\tausi\Downloads\504585394_1396421581411582_6603391267619467232_n-removebg-preview.png" alt="SheElysian Logo">
+    </a>
+  </div>
+  <input type="search" placeholder="Search Products..." />
+  <div class="navbar-icons">
+    <div>Stores</div>
+    <div>Account</div>
+    <div>Wishlist</div>
+    <div>Cart</div>
+  </div>
+</div>
 
-    <section id="crochet">
-      <h2>Crochet</h2>
-      <div class="products">
-        <article class="product">
-          <img src="https://via.placeholder.com/200x150" alt="Crochet Flower">
-          <h3>Crochet Flower</h3>
-          <p>₹500</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </article>
-      </div>
-    </section>
+<nav class="menu">
+  <a href="#">Jewelry</a>
+  <a href="#">Crochet</a>
+  <a href="#">Tote Bags</a>
+  <a href="#">Bookmarks</a>
+</nav>
 
-    <section id="tote">
-      <h2>Tote Bags</h2>
-      <div class="products">
-        <article class="product">
-          <img src="https://via.placeholder.com/200x150" alt="Canvas Tote">
-          <h3>Canvas Tote</h3>
-          <p>₹1,200</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </article>
-      </div>
-    </section>
+<div class="banner">
+  <h1>Birthday Special</h1>
+  <p>Free Jewelry on Orders Above ₹1999</p>
+  <button>Shop Now</button>
+</div>
 
-    <section id="bookmark">
-      <h2>Bookmarks</h2>
-      <div class="products">
-        <article class="product">
-          <img src="https://via.placeholder.com/200x150" alt="Resin Bookmark">
-          <h3>Resin Bookmark</h3>
-          <p>₹300</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </article>
-      </div>
-    </section>
-  </main>
+<footer>
+  &copy; 2025 SheElysian. All rights reserved.
+</footer>
 
-  <footer>
-    <p>&copy; 2025 SheElysian. All rights reserved.</p>
-  </footer>
 </body>
 </html>
