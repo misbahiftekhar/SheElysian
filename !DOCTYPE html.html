@@ -1,197 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SheElysian</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #690216;
-      --background: #fff;
-      --light-pink: #ffe6f0;
-      --gray: #333;
-      --border: #ddd;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--background);
-      color: var(--gray);
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    header {
-      background-color: var(--light-pink);
-      padding: 10px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #000;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: var(--light-pink);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .navbar .logo img {
-      height: 80px;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .navbar .logo img:hover {
-      transform: scale(1.05);
-    }
-
-    .navbar input[type="search"] {
-      width: 300px;
-      padding: 8px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-    }
-
-    .navbar-icons {
-      display: flex;
-      gap: 20px;
-      font-weight: 600;
-    }
-
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px;
-      background: #fff;
-      border-bottom: 2px solid var(--primary);
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    .menu a:hover {
-      color: #500111;
-    }
-
-    .banner {
-      background: linear-gradient(to right, #ffc0cb, #fff0f5);
-      text-align: center;
-      padding: 60px 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .banner h1 {
-      color: var(--primary);
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .banner p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .banner button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .banner button:hover {
-      background-color: #500111;
-    }
-
-    footer {
-      text-align: center;
-      background: var(--primary);
-      color: white;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheElysian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #500111;
+        --background: #fff;
+        --light-pink: #ffe6f0;
+        --gray: #333;
+        --border: #ddd;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background);
+        color: var(--gray);
+        animation: fadeIn 0s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      header {
+        background-color: var(--light-pink);
+        padding: 12px 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #000;
+      }
       .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-
-      .navbar input[type="search"] {
-        width: 100%;
-      }
-
-      .navbar-icons {
-        width: 100%;
+        display: flex;
         justify-content: space-between;
-      }
-
-      .menu {
-        flex-direction: column;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: var(--primary);
+        border-bottom: 1px solid var(--border);
+        flex-wrap: wrap;
         gap: 10px;
       }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  🎉 Happy Birthday Sale – Free gift on orders above ₹1999!
-</header>
-
-<div class="navbar">
-  <div class="logo" style="background-color: #500111; padding: 10px; border-radius: 8px;>
-    <a href="!DOCTYPE%20html.html">
-      <img src="C:\Users\tausi\Downloads\504585394_1396421581411582_6603391267619467232_n-removebg-preview.png" alt="SheElysian Logo">
-    </a>
-  </div>
-  <input type="search" placeholder="Search Products..." />
-  <div class="navbar-icons">
-    <div>Stores</div>
-    <div>Account</div>
-    <div>Wishlist</div>
-    <div>Cart</div>
-  </div>
-</div>
-
-<nav class="menu">
-  <a href="#">Jewelry</a>
-  <a href="#">Crochet</a>
-  <a href="#">Tote Bags</a>
-  <a href="#">Bookmarks</a>
-</nav>
-
-<div class="banner">
-  <h1>Birthday Special</h1>
-  <p>Free Jewelry on Orders Above ₹1999</p>
-  <button>Shop Now</button>
-</div>
-
-<footer>
-  &copy; 2025 SheElysian. All rights reserved.
-</footer>
-
-</body>
+      .navbar .logo {
+        padding: 8px;
+        border-radius: 8px;
+      }
+      .navbar .logo img {
+        height: 70px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .navbar .logo img:hover {
+        transform: scale(1.05);
+      }
+      .navbar input[type="search"] {
+        width: 300px;
+        padding: 8px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background-color: #ffffff;
+      }
+      .navbar-icons {
+        display: flex;
+        gap: 20px;
+        font-weight: 600;
+        flex-wrap: wrap;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 12px;
+        background: #fff;
+        border-bottom: 2px solid var(--primary);
+        flex-wrap: wrap;
+      }
+      .menu a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+      .menu a:hover {
+        color: #500111;
+      }
+      .banner {
+        background: linear-gradient(to right, #ffc0cb, #fff0f5);
+        text-align: center;
+        padding: 60px 20px;
+        animation: fadeIn 1s ease-in-out;
+      }
+      .banner h1 {
+        color: var(--primary);
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      .banner p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .banner button {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .banner button:hover {
+        background-color: #6d0a22;
+      }
+      footer {
+        text-align: center;
+        background: var(--primary);
+        color: white;
+        padding: 20px;
+      }
+      #search-suggestions {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin-top: 5px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 1000;
+        width: 300px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      #search-suggestions.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .navbar input[type="search"] {
+          width: 100%;
+        }
+        .navbar-icons {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .menu {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      🎉 Happy Birthday Sale – Free gift on orders above ₹1999!
+    </header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="C:/Users/tausi/Downloads/504585394_1396421581411582_6603391267619467232_n-removebg-preview.png" alt="SheElysian Logo">
+        </a>
+      </div>
+      <div style="position: relative;">
+        <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search &quot;Pendants&quot;" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <ul id="search-suggestions"></ul>
+      </div>
+      <div class="navbar-icons">
+        <div>Stores</div>
+        <div>Account</div>
+        <div>Wishlist</div>
+        <div>Cart</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#">Jewelry</a>
+      <a href="#">Crochet</a>
+      <a href="#">Tote Bags</a>
+      <a href="#">Bookmarks</a>
+    </nav>
+    <div class="banner">
+      <h1>Birthday Special</h1>
+      <p>Free Jewelry on Orders Above ₹1999</p>
+      <button>Shop Now</button>
+    </div>
+    <footer>
+      &copy; 2025 SheElysian. All rights reserved.
+    </footer>
+    <script>
+      const suggestions = ["Pendants", "Rings", "Crochet Bags", "Tote Bags", "Bookmarks", "Necklaces", "Bracelets"];
+      const input = document.getElementById("Search-In-Modal");
+      const suggestionBox = document.getElementById("search-suggestions");
+      input.addEventListener("input", () => {
+        const value = input.value.toLowerCase();
+        suggestionBox.innerHTML = "";
+        if (value) {
+          const filtered = suggestions.filter(item => item.toLowerCase().includes(value));
+          filtered.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            li.style.padding = "8px";
+            li.style.cursor = "pointer";
+            li.addEventListener("click", () => {
+              input.value = item;
+              suggestionBox.classList.remove("show");
+            });
+            suggestionBox.appendChild(li);
+          });
+          suggestionBox.classList.toggle("show", filtered.length > 0);
+        } else {
+          suggestionBox.classList.remove("show");
+        }
+      });
+      document.addEventListener("click", (e) => {
+        if (!input.contains(e.target)) {
+          suggestionBox.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
 </html>
